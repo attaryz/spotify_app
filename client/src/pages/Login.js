@@ -30,7 +30,7 @@ const StyledLoginImage = styled.img`
 `;
 const Login = () => (
   <StyledLoginContainer>
-    <StyledLoginButton href="http://localhost:8888/login">
+    <StyledLoginButton href="http://localhost:8000/login">
       Log in to Spotify
       <StyledLoginImage src="spotify.png" alt="" />
     </StyledLoginButton>

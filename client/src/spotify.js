@@ -135,3 +135,36 @@ axios.defaults.headers["Content-Type"] = "application/json";
  */
 
 export const getCurrentUserProfile = () => axios.get("/me");
+
+/**
+ * get current user playlists
+ * @return {promise}
+ */
+
+export const getCurrentUserPlaylists = (limit = 20) => {
+  return axios.get(`/me/playlists?limit=${limit}`);
+};
+
+/**
+ * get users top artists and tracks
+ * @param {string} time_range - 'short term' (last 4 weeks) 
+  'medium term' (last 6 months) or 'long term' (calculated from several years of data including all new data 
+  as it becomes available.) default is 'short term' 
+* @return {promise}
+ */
+
+export const getTopArtists = (time_range = "short_term") => {
+  return axios.get(`/me/top/artists?time_range=${time_range}`);
+};
+
+/**
+ * get users top track 
+ * @param {string} time_range - 'short_term (last 4 weeks) 
+  'medium term' (last 6 months) or 'long term' (calculated from several years of data including all new data 
+  as it becomes available.) default is 'short term'   
+  * @return {promise} 
+ */
+
+export const getTopTracks = (time_range = "short_term") => {
+  return axios.get(`/me/top/tracks?time_range=${time_range}`);
+};
