@@ -8,4 +8,6 @@ To run this project, you will need to get the following from [Spotify dashboard]
 
 `CLIENT_SECRET`
 
+[read more from the Spotify documentation](https://developer.spotify.com/documentation/general/guides/authorization-guide/)
+
 `REDIRECT_URL`
